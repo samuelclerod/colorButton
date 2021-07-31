@@ -27,13 +27,13 @@ test('button has starts out enabled', () => {
 
 test('checkbox has starts out unchecked', () => {
   render(<App />);
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name: "Disable button" });
   expect(checkbox).not.toBeChecked();
 })
 
 test('button has to be disabled if checkbox is checked ', () => {
   render(<App />);
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name: "Disable button" });
 
   fireEvent.click(checkbox);
   expect(checkbox).toBeChecked();
@@ -44,7 +44,7 @@ test('button has to be disabled if checkbox is checked ', () => {
 
 test('button has to be enable if checkbox return to checked ', () => {
   render(<App />);
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name: "Disable button" });
 
   fireEvent.click(checkbox);
   fireEvent.click(checkbox);
