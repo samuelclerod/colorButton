@@ -13,7 +13,7 @@ function App() {
       <button
         type="button"
         style={{
-          backgroundColor: buttonColor,
+          backgroundColor: disabled ? 'gray' : buttonColor,
           fontWeight: 'bold',
           color: 'white',
         }}
